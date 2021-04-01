@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    component: web
+  ports:
+    - port: 3000 # eein hamoon (Port) hast ke mige pod chetore az biroon dastresi mishe.
+      targetPort: 3000 # mige ke yek pod dighar chetor be in pod dastresi dashte bashad. inja (Node Port) nist chon ke "Cluster Id" az biroon gabele dastresi nist.
+
